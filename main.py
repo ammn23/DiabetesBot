@@ -22,7 +22,7 @@ application = Application.builder().token(TOKEN).build()
 # Add the command handlers to the application
 application.add_handler(CommandHandler('start', start))
 application.add_handler(CommandHandler('help', helps))
-
+application.add_handler(MessageHandler(filters.Regex('start'),start))
 # Start the bot
 application.run_polling()
 
